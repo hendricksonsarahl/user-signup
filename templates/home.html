@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Signup</h1>
-    <form method='post'>
+
+    <form action="/user-signup" method='post'>
         <table class="center">
             <tbody>
                 <tr>
@@ -9,36 +9,44 @@
                         <label for="username">Username</label>
                     </td>
                     <td>
-                        <input name="username" type="text" value>
-                        <span class = "error"></span>
+                        <input id="username" name="username" type="text" {% if username %}value= {{ username }}{% endif %} />
                     </td>
+                    {% if username_error %}
+                    <td class="error">error: {{ username_error }} </td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td>
                         <label for="password">Password</label>
                     </td>
                     <td>
-                        <input name="password" type="password">
-                        <span class="error"></span>
+                        <input id="password" name="password" type="password" />
                     </td>
+                    {% if password_error %}
+                    <td class="error">error: {{ password_error }} </td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td>
                         <label for="verify">Verify Password</label>
                     </td>
                     <td>
-                        <input name="verify" type="password">
-                        <span class="error"></span>
+                        <input id="verify" name="verify" type="password" />
                     </td>
+                    {% if verify_error %}
+                    <td class="error">error: {{ verify_error }} </td>
+                    {% endif %}
                 </tr>
                 <tr>
                     <td>
                         <label for="email">Email (optional)</label>
                     </td>
                     <td>
-                        <input name="email" type="email" value>
-                        <span class="error"></span>
+                        <input id="email" name="email" type="text" {% if email %}value= {{ email }}{% endif %} />
                     </td>
+                    {% if email_error %}
+                    <td class="error">error: {{ email_error }} </td>
+                    {% endif %}
                 </tr>
             </tbody>
         </table>
