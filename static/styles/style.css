@@ -1,0 +1,34 @@
+body {
+        font-family: 'Aldrich';font-size: 22px;
+        background: url(https://i.ytimg.com/vi/duTJ8k7-Z1M/maxresdefault.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 5% 5%;
+        background-color: transparent;
+}
+
+h1 {
+        text-align: center;
+        color: whitesmoke;
+}
+
+table {
+        color: whitesmoke;
+        background-color: transparent;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+}
+
+.error {
+        color: red;
+}
+
+table.center { 
+        margin-left:auto; margin-right:auto;
+}
+
+.buttonHolder { 
+        text-align: center;
+} 
