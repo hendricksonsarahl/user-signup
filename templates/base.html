@@ -1,5 +1,5 @@
 <!doctype html>
-<div class="container">
+<div class="container-fluid">
 <html>
     <head>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
@@ -8,14 +8,16 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
             <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
-        <title>User-Signup</title>
+        <div class="container">    
+            <title>User-Signup</title>
+        </div>
     </head>
 <body>
-
+    <div class="container">
         <h1>
             <a href="/">User-Signup</a>
         </h1>
-
+    </div>
     {% block content %}
     {% endblock %}
 </div>
